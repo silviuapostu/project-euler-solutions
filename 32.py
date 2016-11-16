@@ -24,7 +24,7 @@ def pandigitals_sum():
         for j in range(j_start, j_end+1):
             if is_pandigital_triplet([i, j, i*j]):
                 pandigitals.append(i*j)
-            
+
     return sum(list(set(pandigitals)))
 
 
