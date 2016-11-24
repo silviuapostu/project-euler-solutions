@@ -30,5 +30,7 @@ def erathos(n):
 
 
 def is_pandigital(x):
+    if x < 0 or x >= 10**9:
+        return False
     digits = list(str(x))
-    return ''.join(sorted(digits)) == '123456789'
+    return ''.join(sorted(digits)) == '123456789'[:len(digits)]
