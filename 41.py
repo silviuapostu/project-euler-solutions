@@ -11,7 +11,7 @@ from euler_utils import is_prime
 
 def max_pandigital_prime():
     for i in range(9, 0, -1):
-        digits = [str(i) for i in range(1, i+1)]
+        digits = [str(x) for x in range(1, i+1)]
         perms = list(permutations(digits))
         ints = [int(''.join(p)) for p in perms]
         for x in sorted(ints, reverse=True):
