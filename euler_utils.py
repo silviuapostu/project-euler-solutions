@@ -16,6 +16,20 @@ def is_prime(x):
     return True
 
 
+def prime_factors(x):
+    factors = []
+    primes = erathos(x+1)
+    i = 0
+    while x != 1:
+        p = primes[i]
+        if x % p == 0:
+            factors.append(p)
+        while x % p == 0:
+            x /= p
+        i += 1
+    return factors
+
+
 def erathos(n):
     '''
     Create an Erathostenes sieve for prime numbers up to n
